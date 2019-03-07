@@ -1,0 +1,175 @@
+// 购物车列表信息
+// 缺少商品的url, tag（"会员，明日送达等标签"）
+const cartPageMock = {
+	"code": 0,
+	"message": "成功",
+	"full_message": null,
+	"checkedall": 0,
+	"get_cart_total": {
+		"voucher_dicount_price": 0,
+		"number": 4,
+		"total_after_discount": 499,
+		"total_discount": 0,
+		"total_price": 499,
+		"total_weight": 0,
+		"variety": 2
+	},
+	"current_cart": {
+		"shop_id": 2077,
+		"shop_name": "测试专用店",
+		"shop_type": null,
+		"has_coupon": 0,
+		"cartitemlist": [{
+			"cart_id": 1807250010005,
+			"activityinfo": null,
+			"activity_detail": null,
+			"bn": "SKBT18MC5O2BLUE00L",
+			"cat_id": "99998",
+			"dlytmpl_id": 0,
+			"image_default_id": "http://img.mamhao.cn/SKBT18MC5/985e2831-1c6f-4322-a136-402060bbd6ab.jpg",
+			"is_checked": 1,
+			"style_num_id": 200000936650,
+			"obj_type": "item",
+			"quantity": 1,
+			"selected_promotion": "",
+			"item_num_id": 12025729,
+			"spec_info": "测试颜色：粉红，测试专用尺寸：XXL",
+			"status": "outofstock",
+			"store": 9,
+			"sub_stock": null,
+			"title": "针织短袖T恤衫",
+			"user_id": 1805100010001,
+			"valid": "true",
+			"weight": 0,
+			"price": {
+				"price": 199,
+				"mkt_price": 202.98,
+				"total_price": 199,
+				"dis_after_single_price": 199,
+				"dis_after_total_price": 199
+			}
+		},{
+			"cart_id": 1807250010006,
+			"activityinfo": null,
+			"activity_detail": null,
+			"bn": "SKBT18MC5O2BLUE00L",
+			"cat_id": "99998",
+			"dlytmpl_id": 0,
+			"image_default_id": "http://img.mamhao.cn/SKBT18MC5/985e2831-1c6f-4322-a136-402060bbd6ab.jpg",
+			"is_checked": 0,
+			"style_num_id": 200000936650,
+			"obj_type": "item",
+			"quantity": 6,
+			"selected_promotion": "",
+			"item_num_id": 12025729,
+			"spec_info": "测试颜色：粉红，测试专用尺寸：XXL",
+			"status": "onsale",
+			"store": 10,
+			"sub_stock": null,
+			"title": "针织短袖T恤衫",
+			"user_id": 1805100010001,
+			"valid": "true",
+			"weight": 0,
+			"price": {
+				"price": 199,
+				"mkt_price": 202.98,
+				"total_price": 199,
+				"dis_after_single_price": 199,
+				"dis_after_total_price": 199
+			}
+		}]
+	},
+	"stock_out_list": [{
+    "cart_id": 1807250010005,
+    "activityinfo": null,
+    "activity_detail": null,
+    "bn": "SKBT18MC5O2BLUE00L",
+    "cat_id": "99998",
+    "dlytmpl_id": 0,
+    "image_default_id": "http://img.mamhao.cn/SKBT18MC5/985e2831-1c6f-4322-a136-402060bbd6ab.jpg",
+    "is_checked": 1,
+    "style_num_id": 200000936650,
+    "obj_type": "item",
+    "quantity": 1,
+    "selected_promotion": "",
+    "item_num_id": 12025729,
+    "spec_info": "测试颜色：粉红，测试专用尺寸：XXL",
+    "status": "outofstock",
+    "store": 9,
+    "sub_stock": null,
+    "title": "针织短袖T恤衫",
+    "user_id": 1805100010001,
+    "valid": "true",
+    "weight": 0,
+    "price": {
+      "price": 199,
+      "mkt_price": 202.98,
+      "total_price": 199,
+      "dis_after_single_price": 199,
+      "dis_after_total_price": 199
+    }
+  },{
+    "cart_id": 1807250010006,
+    "activityinfo": null,
+    "activity_detail": null,
+    "bn": "SKBT18MC5O2BLUE00L",
+    "cat_id": "99998",
+    "dlytmpl_id": 0,
+    "image_default_id": "http://img.mamhao.cn/SKBT18MC5/985e2831-1c6f-4322-a136-402060bbd6ab.jpg",
+    "is_checked": 0,
+    "style_num_id": 200000936650,
+    "obj_type": "item",
+    "quantity": 6,
+    "selected_promotion": "",
+    "item_num_id": 12025729,
+    "spec_info": "测试颜色：粉红，测试专用尺寸：XXL",
+    "status": "onsale",
+    "store": 10,
+    "sub_stock": null,
+    "title": "针织短袖T恤衫",
+    "user_id": 1805100010001,
+    "valid": "true",
+    "weight": 0,
+    "price": {
+      "price": 199,
+      "mkt_price": 202.98,
+      "total_price": 199,
+      "dis_after_single_price": 199,
+      "dis_after_total_price": 199
+    }
+  }],
+	"sold_out_list": [],
+	"without_list": [],
+	"cart_item_gifts": [{
+		'id': 121,
+		'item_num_id': 1807250010005,
+		'store': 0,
+		'style_num_id': 1,
+		'title': '曼秀雷敦护肤剂试用装',
+		'image_default_id': '',
+		'price': 1212,
+		'mkt_price': 121313,
+		'weight': '1.2kg',
+		'quantity': 2,
+		'spec_info': '曼秀雷敦护肤剂试用装'
+	}],
+	"promotion_cauclate": {
+		"app_operation_sequence_number": "1807250110035999",
+		"single_item_fit_promotions": [{
+			"item_num_id": 12025729,
+			"loc_pty_num_id": 1,
+			"infos": []
+		}, {
+			"item_num_id": 12024548,
+			"loc_pty_num_id": 1,
+			"infos": []
+		}],
+		"ticket_ids": [],
+		"deducts": [],
+		"gifts": [],
+		"cash_coupons": [],
+		"item_trade_prices": [],
+		"cauclate_promotion_probably_use_labler_series": null
+	}
+}
+export default {cartPageMock}

@@ -1,0 +1,338 @@
+@import "./common";
+  img{
+    &.img-inline{
+      display: inline-block;
+    }
+  }
+  .input{
+    &[type="text"]{
+      border-radius: 10px;
+      border: 1px solid @light-border-gray;
+      background-color: @common-bg;
+    }
+    &::-webkit-input-placeholder{
+      color: @light-gray;
+    }   
+    &:-moz-placeholder{
+      color: @light-gray;
+    }                 
+    &::-moz-placeholder{
+      color: @light-gray;
+    }                  
+    &:-ms-input-placeholder{
+      color: @light-gray;
+    }          
+  }
+  .com-title{
+    // width: 60%;
+  }
+  .more-detail{
+    // width: 40%;
+    text-align: right;
+  }
+  .more-icon,
+  .arrow-right,
+  .help-fee,
+  .radio-icon,
+  .fee-help{
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    padding-left: 30px;
+  }
+  .more-icon{
+    height: 10px;
+  }
+  .address-container,
+  .choose-delivery{
+    background-color: @white;
+  }
+  page,
+  .body {
+    width: 100%;
+    height: 100%;
+    font-family: PingFangSC-Regular;
+    background-color: @common-bg;
+  }
+  .checkout-container{
+    width: 100%;
+    height: 100%;
+    font-size: @base-font;
+    color: @text-black;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    &>div{
+      padding: 0 25px;
+      background-color: @white;
+      box-sizing: border-box;
+      &.no-padding{
+        padding: 0px;
+      }
+      &.delivery-item,
+      &.invoice-container,
+      &.coupon-container,
+      &.total-container,
+      &.self-pick{
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+      &.self-pick{
+        background-color: @common-bg;
+      }
+    }
+  }
+  .address-container{
+    .addr-main{
+      width: 91%;
+      padding-top: 38px;
+      padding-bottom: 45px;
+      .user-info{
+        color: @text-black;
+        font-size: @font4;
+        margin-bottom: 25px;
+      }
+      .addr-detail{
+        color: @text-gray;
+        margin-bottom: 0px;
+      }
+      &.text-green{
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
+    }
+    .addr-arrow{
+      text-align: right;
+    }
+  }
+  .border{
+    width: 100%;
+    height: 6px;
+  }
+  .choose-delivery{
+    margin-top: 24px;
+    .delivery-title{
+      padding: 27px 0px;
+      border-bottom: 1px solid @light-white;
+      .title-name{
+        // width: 45%;
+      }
+      .title-method{
+        text-align: right;
+        .radio-label{
+          display: inline-block;
+          margin-right: 80px;
+          &:last-of-type{
+            margin-right: 0px;
+          }
+          .input-default{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .self-pick{
+    .pick-shop{
+      margin-bottom: 15px;
+    }
+  }
+  .delivery-item{
+    border-bottom: 1px solid @light-white;
+    margin-bottom: 24px;
+    .time-container{
+      margin-bottom: 33px;
+      .time-title{
+        // width: 60%;
+      }
+      .delivery-time{
+        // width: 40%;
+        // text-align: right;
+      }
+    }
+    .pro-container{
+      .pro-detail{
+        width: 60%;
+        .pro-img{
+          display: inline-block;
+          width: 90px;
+          height: 90px;
+          margin-right: 20px;
+          background-color: @light-white;
+          &:last-of-type{
+            margin-right: 0;
+          }
+        }
+      }
+      .all-pro{
+        width: 40%;
+        text-align: right;
+        align-self: flex-end;
+      }
+    }
+  }
+  .note-container{
+    margin-top: 28px;
+    .note-label{
+      align-self: center;
+      margin-right: 20px;
+    }
+    .input{
+      flex: 1;
+      padding: 10px;
+    }
+  }
+  .invoice-container,
+  .coupon-container{
+    margin-bottom: 24px;
+  }
+  .total-container{
+    margin-bottom: 100px;
+    .total-amount{
+      margin-bottom: 10px;
+    }
+    .fee-help{
+      padding-left: 0px;
+      padding-right: 30px;
+    }
+  }
+  .check-bar{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    border-top: 1px solid @light-white;
+    z-index: 2;
+    .pay-amount{
+      align-self: center;
+      margin-left: 25px;
+    }
+  }
+
+  .shadow{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(13,13,13,.4);
+    z-index: 3;
+  }
+  .shadow-container{
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    font-size: @font3;
+    background-color: @white;
+  }
+  .shadow-header{
+    padding: 32px 0;
+    font-size: @font4;
+    font-weight: 500;
+    text-align: center;
+  }
+  .shadow-footer{
+    padding: 113px 0 31px 0;
+    text-align: center;
+  }
+  .picker-container{
+    width: 100%;
+    height: 555px;
+    background-color: @bg-gray;
+    .picker-title{
+      color: @text-gray;
+    }
+    .picker-time-container{
+      color: @text-gray;
+      height: 465px;
+      overflow-y: scroll;
+      align-items: flex-start;
+      .picker-day{
+        width: 220px;
+        text-align: center;
+      }
+      .picker-time{
+        width: 530px;
+        padding-left: 48px;
+        background-color: @white;
+      }
+      .picker-item{
+        padding: 34px 0;
+        &.active{
+          color: @text-black;
+          background-color: @white;
+        }
+        &.time-item{
+          border-bottom: 1px solid @light-white;
+          // position: relative;
+          img{
+            &.selected-img{
+              width: 31px;
+              height: 22px;
+              // position: absolute;
+              // right: 0px;
+              // bottom: 0px;
+              padding: 0 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .invoice-content{
+     color: @text-gray;
+    .invoice-line{
+      width: auto;
+      height: 90px;
+      padding: 0px 29px;
+      border-bottom: 1px solid @light-white;
+      &.flex{
+        .line-detail{
+          flex: 1;
+        }
+      }
+      .line-title{
+        margin-right: 50px;
+      }
+      .line-detail{
+        .invoice-title{
+          display: inline-block;
+          padding: 16px 35px;
+          border: 1px solid @light-white;
+          margin-right: 30px;
+          display: inline-block;
+          border-radius: 30px;
+          &.active{
+            border: 1px solid @green;
+          }
+        }
+      }
+    }
+  }
+  .save-invoice-btn{
+    display: inline-block;
+    padding: 19px 179px;
+    background-color: @green;
+    border-radius: 60px;
+  }
+  .shadow-container{
+    animation: translateIn .3s;
+    font-size: @base-font;
+  }
+  .addr-content{
+    max-height: 900px;
+    overflow-y: scroll;
+  }
+  .weui-dialog{
+    width: 80%;
+    max-width: 600px;
+  }
+  
+  @keyframes translateIn
+  {
+    from {
+      bottom: -100%;
+    }
+    to {
+      bottom: 0;
+    }
+  }

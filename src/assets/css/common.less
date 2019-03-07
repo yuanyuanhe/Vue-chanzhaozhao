@@ -1,0 +1,261 @@
+@import "./variable";
+*{
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+a{
+	text-decoration: none;
+}
+body{
+	margin:0;
+	font: 28px/1 Arial,"Lucida Grande",Verdana,"Microsoft Yahei",STXihei,Sans-serif;
+	color: #333333;
+}
+ul,li,dl,dt,dd{
+	list-style: none;
+}
+img{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+//文字对齐方式
+.tl{ text-align: left;}
+.tc{ text-align: center;}
+.tr{ text-align: right;}
+
+//div隐藏
+.hidden{ display: none;}
+
+//文字超出虚线不换行
+.txt-ellipsis{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.txt-through{
+	text-decoration: line-through;
+}
+
+//浮动
+.fl{ float: left;}
+.fr{ float: right;}
+
+//清除浮动
+.clearfix{
+	overflow: auto;
+	zoom: 1;
+	&:after{
+		content: '';
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+}
+
+//文字框的类型
+.inline{ display: inline;}
+.inline-block{ display: inline-block;}
+.block{ display: block;}
+
+//字体颜色
+.color-blue{ color: #208656;}
+.color-gray{ color: #cccccc;}
+//字体大小
+.font-10{ font-size: 10px;}
+.font-12{ font-size: 12px;}
+.font-14{ font-size: 14px;}
+.font-16{ font-size: 16px;}
+.font-18{ font-size: 18px;}
+.font-24{ font-size: 24px;}
+.font-36{ font-size: 36px;}
+.font-20{ font-size: 20px;}
+.font-24{ font-size: 24px;}
+.font-28{ font-size: 28px;}
+.font-32{ font-size: 32px;}
+.font-36{ font-size: 36px;}
+.font-48{ font-size: 48px;}
+.font-72{ font-size: 72px;}
+
+//外边距
+.ml5{ margin-left: 5px;}
+.mt10{margin-top: 10px;}
+.mt12{margin-top: 12px;}
+
+.ml10{ margin-left: 10px;}
+.mt20{margin-top: 20px;}
+.mt24{margin-top: 24px;}
+//内边距
+.pt5{ padding-top: 5px;}
+.pr5{ padding-right: 5px;}
+.pb5{ padding-bottom: 5px;}
+.pl5{ padding-left: 5px;}
+.p5{ padding: 5px;}
+.pt8{ padding-top: 8px;}
+.pr8{ padding-right: 8px;}
+.pb8{ padding-bottom: 8px;}
+.pl8{ padding-left: 8px;}
+.p8{ padding: 8px;}
+.pt10{ padding-top: 10px;}
+.pr10{ padding-right: 10px;}
+.pb10{ padding-bottom: 10px;}
+.pl10{ padding-left: 10px;}
+.p10{ padding: 10px;}
+.pt14{ padding-top: 14px;}
+.pr14{ padding-right: 14px;}
+.pb14{ padding-bottom: 14px;}
+.pl14{ padding-left: 14px;}
+.p14{ padding: 14px;}
+.pt15{ padding-top: 15px;}
+.pr15{ padding-right: 15px;}
+.pb15{ padding-bottom: 15px;}
+.pl15{ padding-left: 15px;}
+.p15{ padding: 15px;}
+.pt16{ padding-top: 16px;}
+.pr16{ padding-right: 16px;}
+.pb16{ padding-bottom: 16px;}
+.pl16{ padding-left: 16px;}
+.p16{ padding: 16px;}
+.pt20{ padding-top: 20px;}
+.pr20{ padding-right: 20px;}
+.pb20{ padding-bottom: 20px;}
+.pl20{ padding-left: 20px;}
+.p20{ padding: 20px;}
+.pt28{ padding-top: 28px;}
+.pr28{ padding-right: 28px;}
+.pb28{ padding-bottom: 28px;}
+.pl28{ padding-left: 28px;}
+.p28{ padding: 28px;}
+.pt30{ padding-top: 30px;}
+.pr30{ padding-right: 30px;}
+.pb30{ padding-bottom: 30px;}
+.pl30{ padding-left: 30px;}
+.p30{ padding: 30px;}
+
+
+
+
+input[type="text"] {
+	border:0;
+	-webkit-appearance: none;
+}
+textarea{
+	border:0;
+	-webkit-appearance: none;
+}
+
+.money-icon{
+	&:before{
+		content:'￥';
+    display: table-cell;
+    vertical-align: middle;
+    
+	}
+}
+
+html,
+body,
+#app{
+	height: 100%;
+}
+
+.flex-between{
+	width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.text-gray{
+  color: @text-gray;
+}
+.light-gray{
+  color: @light-gray;
+}
+.text-green{
+  color: @green;
+}
+.text-white{
+  color: @white;
+}
+.text-black{
+  color: @text-black;
+}
+.item-tag{
+  display: inline-block;
+  font-size: @font3;
+  padding: 6px 12px;
+  margin-right: 10px;
+  border: 1px solid @green;
+  border-radius: 20px;
+  color: @green;
+  &.yellow{
+    color: @light-yellow;
+    border: 1px solid @light-yellow;
+  }
+}
+.price-value{
+  color: @green;
+  font-size: @font1;
+}
+.price-symbol{
+  font-size: @font3;
+  color: @green;
+}
+.icon{
+  width: 42px;
+  height: 42px;
+}
+.addr-main{
+  overflow: hidden;
+  .addr-detail{
+    margin-bottom: 14px;
+  }
+  .user-info{
+    color: @text-gray;
+    overflow: hidden;
+    text-overflow: ellipse;
+    white-space: nowrap;
+    .user-name{
+      margin-right: 15px;
+    }
+  }
+}
+ .addr-arrow{
+  width: 42px;
+  height: 42px;
+  padding: 20px 0px 20px 20px;
+  align-self: center;
+  /* margin-right: 13px; */
+  /* margin: 17px 0 0 13px; */
+}
+.weui-cells{
+  &:before{
+    display: none;
+  }
+  /*swtich整体大小及背景色*/
+  .weui-switch{
+    &:checked{
+      border-color: @green;
+      background-color: @green;
+    }
+  }
+}
+.com-btn{
+  font-size: 32px;
+  color: @white;
+  padding: 30px 60px;
+  background-color: @green;
+}
